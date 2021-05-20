@@ -1,0 +1,50 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri May 14 23:38:25 2021
+
+@author: Raghav Utpat
+"""
+
+
+test_file = 'pos-test.txt'
+#num_ques = 2
+ratio = 0.33
+
+with open(test_file,'r+') as f:
+    
+    data = f.readlines()
+    
+    totCounts = {}
+    
+    for line in data:
+        pedId = line.split()[1]
+        if pedId in totCounts:
+            totCounts[pedId]+=1
+        else:
+            totCounts[pedId] = 1
+            
+            
+    currPed = data[-1].split()[1]
+    print("CurrPed is " + currPed)
+    currCount = 0
+    
+    for i,line in reversed(list(enumerate(data))):
+        pedId = line.split()[1]
+        
+        if(pedId == currPed):
+            currCount+=1
+        else:
+            currPed = pedId
+            currCount = 1
+            print("New CurrPed is " + currPed)
+        
+        if(currCount<(ratio*totCounts[pedId])):
+            print("Replacing "+pedId+" in line "+line)
+            data[i] = line.replace(' '+pedId+' ',' ? ',1)
+            
+    f.truncate(0)
+    #print(type(data))
+    #print("\n\n\n")
+    #print(data)
+    for line in data:
+        f.write(line)
