@@ -1,0 +1,35 @@
+1.SLSTM(20 EPOCHS,0.005 learning rate)
+valid_loss = 2.693, valid_mean_err = 0.898, valid_final_err = 1.733
+valid_loss = 2.911, valid_mean_err = 0.907, valid_final_err = 1.865
+valid_loss = 3.034, valid_mean_err = 0.888, valid_final_err = 1.739
+
+2.Vanila LSTM(20 Epochs,0.005 lr)
+valid_loss = 3.689, valid_mean_err = 0.945, valid_final_err = 1.973
+valid_loss = 3.985, valid_mean_err = 0.909, valid_final_err = 1.939
+valid_loss = 3.960, valid_mean_err = 0.907, valid_final_err = 1.918
+
+3.OLSTM(Same Config)
+valid_loss = 3.637, valid_mean_err = 0.869, valid_final_err = 1.800
+valid_loss = 2.969, valid_mean_err = 0.879, valid_final_err = 1.817
+valid_loss = 2.870, valid_mean_err = 0.902, valid_final_err = 1.919
+
+*******************************************************************************
+1.SLSTM(10 Epochs,0.003 learning rate)
+valid_loss = 3.314, valid_mean_err = 0.984, valid_final_err = 2.036
+
+2.VLSTM(Same Config)
+valid_loss = 8.463, valid_mean_err = 3.064, valid_final_err = 5.059
+
+3.OLSTM(Same Config)
+valid_loss = 8.390, valid_mean_err = 2.971, valid_final_err = 4.901
+
+********************************************************************************
+1.SLSTM(20 Epochs,0.005 lr,GRU Cell)
+valid_loss = 0.613, valid_mean_err = 0.894, valid_final_err = 1.721
+
+
+2.VLSTM(Same Config)
+valid_loss = 0.969, valid_mean_err = 0.942, valid_final_err = 1.960
+
+3.OLSTM(Same Config)
+valid_loss = 0.629, valid_mean_err = 0.918, valid_final_err = 1.916
